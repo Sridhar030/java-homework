@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;
 
 @Entity
 public class Transaction {
@@ -13,12 +14,12 @@ public class Transaction {
     private Long id;
     private String customerId;
     private int amount;
-    private String date;
+    private LocalDate date;
 
     public Transaction() {
     }
 
-    public Transaction(String customerId, int amount, String date) {
+    public Transaction(String customerId, int amount, LocalDate date) {
         this.customerId = customerId;
         this.amount = amount;
         this.date = date;
@@ -48,11 +49,11 @@ public class Transaction {
         this.amount = amount;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 }

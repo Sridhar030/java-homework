@@ -24,8 +24,8 @@ public class TransactionController {
         transactionService.saveTransaction(transaction);
     }
 
-    @GetMapping("/rewards")
-    public Map<String, Integer> getRewards() {
-        return transactionService.calculateRewards();
+    @GetMapping("/rewards-per-month-with-total")
+    public Map<String, Map<String, Integer>> getRewardsPerMonthWithTotal() {
+        return transactionService.calculateRewardsPerMonthWithTotal();
     }
 }
