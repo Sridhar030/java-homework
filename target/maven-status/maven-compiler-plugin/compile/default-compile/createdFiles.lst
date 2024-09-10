@@ -1,5 +1,0 @@
-com/example/rewards/model/Transaction.class
-com/example/rewards/repository/TransactionRepository.class
-com/example/rewards/service/TransactionService.class
-com/example/rewards/controller/TransactionController.class
-com/example/rewards/RewardsApplication.class
