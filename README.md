@@ -61,20 +61,19 @@ Once the application is running, access the Swagger UI at:
 2. **Get Rewards Per Month with Total**
     - **Endpoint:** `GET /api/transactions/rewards-per-month-with-total`
     - **Description:** Retrieves the calculated rewards per month and total for each customer.
-    - **Request Body:**
+    - **Responses:**
+      - `200 OK` – Returns a map of rewards per customer and month.
        ```json
        {
         "cust1": {
-         "2024-01": 100,
-         "Total": 100
+        "2024-01": 100,
+        "Total": 100
         },
         "cust2": {
-         "2024-02": 50,
-         "2024-03": 30,
-         "Total": 80
+        "2024-02": 50,
+        "2024-03": 30,
+        "Total": 80
         }
        }
        ```
-    - **Responses:**
-        - `200 OK` – Returns a map of rewards per customer and month.
-        - `500 Internal Serve
+      - `500 Internal Server Error` – Error getting the rewards information.
